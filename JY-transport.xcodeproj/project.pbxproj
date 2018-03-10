@@ -2498,7 +2498,6 @@
 		8974B9211F3EF33E00DD12C4 /* Net work */ = {
 			isa = PBXGroup;
 			children = (
-				8974B9221F3EF33E00DD12C4 /* AFN */,
 				8974B9231F3EF33E00DD12C4 /* NetAPIs.h */,
 				8974B9241F3EF33E00DD12C4 /* NetAPIs.m */,
 				8974B9251F3EF33E00DD12C4 /* NetWorkHelper.h */,
@@ -2510,13 +2509,6 @@
 				896100CD1F42A2A200987C04 /* AFAppDotNetAPIClient.m */,
 			);
 			path = "Net work";
-			sourceTree = "<group>";
-		};
-		8974B9221F3EF33E00DD12C4 /* AFN */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AFN;
 			sourceTree = "<group>";
 		};
 		8984F3E91EA87BBD00435A6E = {
@@ -2545,12 +2537,12 @@
 			isa = PBXGroup;
 			children = (
 				6542F1561FDF865D00A6B2AB /* Tool */,
+				8974B9211F3EF33E00DD12C4 /* Net work */,
 				89E9C8F51EDFB3580084F116 /* JY-transport.entitlements */,
 				8959AAD01F453D15008E1A0F /* Logistics */,
 				8984F4281EA87E6300435A6E /* Classes */,
 				8984F3FE1EA87BBE00435A6E /* Main.storyboard */,
 				8984F4011EA87BBE00435A6E /* Assets.xcassets */,
-				8984F4711EA99A4F00435A6E /* Image */,
 				8984F4031EA87BBE00435A6E /* LaunchScreen.storyboard */,
 				8984F4061EA87BBE00435A6E /* Info.plist */,
 				654A5B201FB9940300330A81 /* Localizable.strings */,
@@ -2596,8 +2588,8 @@
 			children = (
 				65B8DEA21FD9253C0034D3BD /* Tool */,
 				8987C0CB1ED83548005616C3 /* LoginAndRegister */,
-				8984F4291EA87E6300435A6E /* HomePage */,
 				8984F42E1EA87E6300435A6E /* Main */,
+				8984F4291EA87E6300435A6E /* HomePage */,
 				8984F4331EA87E6300435A6E /* Message */,
 				8984F4371EA87E6300435A6E /* Mine */,
 			);
@@ -2650,6 +2642,8 @@
 			children = (
 				895995301F35DEA0006D6D9D /* XZPickView */,
 				A4F8BCEF1F19DAA4002D49DC /* AnnationView */,
+				4A42EF2B1EBF943A000947ED /* WSDaePickerView */,
+				4A42EF001EBF3EC9000947ED /* TLcityPicker */,
 				899A19BC1EE291B2007FD26C /* XGAnnotation.h */,
 				899A19BD1EE291B2007FD26C /* XGAnnotation.m */,
 				899A19BE1EE291B2007FD26C /* XGAnnotationView.h */,
@@ -2659,8 +2653,6 @@
 				89F2ED581F1DB4D900D13BAC /* timeAlertView.xib */,
 				8987C0E41ED84009005616C3 /* AdBannerView.h */,
 				8987C0E51ED84009005616C3 /* AdBannerView.m */,
-				4A42EF2B1EBF943A000947ED /* WSDaePickerView */,
-				4A42EF001EBF3EC9000947ED /* TLcityPicker */,
 				890117CB1EB82364007516D4 /* JYTitleButton.h */,
 				890117CC1EB82364007516D4 /* JYTitleButton.m */,
 				890117D01EB85BE7007516D4 /* PopoverAction.h */,
@@ -2733,9 +2725,9 @@
 		8984F42F1EA87E6300435A6E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				655D62591FA08FEF00EB819E /* MBProgressHUD+JDragon */,
 				655D625E1FA08FF000EB819E /* MBProgressHUD.h */,
 				655D625D1FA08FF000EB819E /* MBProgressHUD.m */,
-				655D62591FA08FEF00EB819E /* MBProgressHUD+JDragon */,
 				8987BCD91EAB6AC7009BE974 /* FMButton.h */,
 				8987BCDA1EAB6AC7009BE974 /* FMButton.m */,
 				8984F47F1EA9AA9500435A6E /* UIColor+HexStringColor.h */,
@@ -2767,11 +2759,10 @@
 		8984F4311EA87E6300435A6E /* LIb */ = {
 			isa = PBXGroup;
 			children = (
-				8974B9211F3EF33E00DD12C4 /* Net work */,
+				89AC67A71EE325FE000D383A /* alPay */,
 				4A73C6C81EE9C2E50073FFD1 /* AMapNavi.bundle */,
 				4A73C6C61EE9C2810073FFD1 /* AMap.bundle */,
 				4A73C6C41EE9B4BA0073FFD1 /* AMapNaviKit.framework */,
-				89AC67A71EE325FE000D383A /* alPay */,
 				4A42EEFA1EBF3DC0000947ED /* AMapLocationKit.framework */,
 				89D6C4C31EBB07E5004BE0F4 /* MAMapKit.framework */,
 				89D6C4BF1EBB07BE004BE0F4 /* AMapFoundationKit.framework */,
@@ -3078,18 +3069,10 @@
 				8984F3F81EA87BBE00435A6E /* AppDelegate.h */,
 				8984F3F91EA87BBE00435A6E /* AppDelegate.m */,
 				8984F4561EA89B2600435A6E /* JY-PrefixHeader.pch */,
-				89AE37441EB040CD00E3319E /* custom_tab_bar_array.plist */,
 				8984F4591EA89C2D00435A6E /* GlobalFile.h */,
+				89AE37441EB040CD00E3319E /* custom_tab_bar_array.plist */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		8984F4711EA99A4F00435A6E /* Image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Image;
-			path = Assets.xcassets/Image;
 			sourceTree = "<group>";
 		};
 		8987C0CB1ED83548005616C3 /* LoginAndRegister */ = {

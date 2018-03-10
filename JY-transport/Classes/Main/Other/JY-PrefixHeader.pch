@@ -27,11 +27,11 @@
 #import "UIView+Extension.h"
 #import "NSDate+Date.h"
 #import "NSData+data.h"
+
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 
 #endif
-
 
 //#define BgColorOfUIView  [UIColor colorWithHexString:@"#eaeff3"]
 #define BgColorOfUIView  [UIColor colorWithHexString:@"#f7f7f7"]
@@ -39,10 +39,7 @@
 #define DEFAULTS [NSUserDefaults standardUserDefaults]
 #define  userPhone   [JYAccountTool userName]
 
-
 #define Default_label_colol [UIColor colorWithHexString:@"#333333"]
-
-
 
 #define IOS_9 [[[UIDevice currentDevice] systemVersion] floatValue] > 9.0
 

@@ -20,8 +20,8 @@
 + (void)PostRequestUseInfo:(NSString *)phone success:(void(^)(id responseObj))success
                 failure:(void(^)(NSError *error))failure;
 
-
-
+//获取优惠卷list
++(void)PostRequestcpType:(NSString *)cpType success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure;
 
 
 

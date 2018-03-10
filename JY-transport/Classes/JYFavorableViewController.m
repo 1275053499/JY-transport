@@ -63,16 +63,23 @@
 }
 - (void)getCouponList{
     
-    NSString *urlBase = [NSString stringWithFormat:base_url];
-    NSString *urlstr = [urlBase stringByAppendingString:@"app/coupon/getCouponList"];
-    [[NetWorkHelper shareInstance] Post:urlstr parameter:@{@"cpType":@"1"} success:^(id responseObj) {
-        
-     _couponArr = [CouponModel mj_objectArrayWithKeyValuesArray:responseObj];
-    [self.tableView reloadData];
-    
+
+    [NetWorkRequest PostRequestcpType:@"1" success:^(id responseObj) {
+        _couponArr = [CouponModel mj_objectArrayWithKeyValuesArray:responseObj];
+        [self.tableView reloadData];
     } failure:^(NSError *error) {
         
     }];
+    
+//    NSString *urlBase = [NSString stringWithFormat:base_url];
+//    NSString *urlstr = [urlBase stringByAppendingString:@"app/coupon/getCouponList"];
+//    [[NetWorkHelper shareInstance] Post:urlstr parameter:@{@"cpType":@"1"} success:^(id responseObj) {
+//
+//
+//
+//    } failure:^(NSError *error) {
+//
+//    }];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

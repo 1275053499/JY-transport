@@ -24,8 +24,6 @@
 @end
 
 
-
-
 @interface WSStarRatingView : UIView
 
 @property (nonatomic, readonly) int numberOfStar;

@@ -78,7 +78,6 @@
     mineNavigationController.delegate = self;
     
     
-  
     self.viewControllers = [NSArray arrayWithObjects:homePageNavigationController,messageNavigationController,favorableNavigationController,mineNavigationController, nil];
 }
 
@@ -153,7 +152,6 @@
         NSArray *arr = [NSArray arrayWithObjects:messageViewController, nil];
         [navi setViewControllers:arr animated:YES];
 
-        
     }];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -166,23 +164,18 @@
     [alert addAction:cancelAction];
     
     alert.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
-    
     [self presentViewController:alert animated:YES completion:nil];
     
 }
 
-
 - (void)newOrder:(NSNotification *)notification{
-    
     
   id  vc =  [self presentingVC];
     if ([vc isKindOfClass:[JYWaitingAnimationViewController class]]) {
         
     }else{
         [self presentTipForNewOrder];
- 
     }
-    
 }
 
 //获取到当前所在的视图
@@ -209,6 +202,7 @@
     }
     return result;
 }
+
 - (void)presentTipForNewOrder{
     
     NSString *message = @"物流公司已出价，点开订单详情查看吧";
@@ -227,13 +221,12 @@
         
     }];
     
-    
     [alert addAction:cancelaction];
     [alert addAction:sureaction];
     
-    
     [self presentViewController:alert animated:true completion:nil];
 }
+
 /*
  #pragma mark -UINavigationControllerDelegate
  - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -256,11 +249,10 @@
  }
  }
  */
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
-
-
 
 @end

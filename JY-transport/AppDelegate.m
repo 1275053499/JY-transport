@@ -41,7 +41,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -126,7 +125,6 @@
                                               categories:nil];
     }
 
-
 #ifdef DEBUG
     BOOL isProduction = NO;// NO为开发环境
 #else
@@ -163,6 +161,7 @@
     }];
 
 }
+
 // 微信支付
 - (void)onResp:(BaseResp *)resp {
     
@@ -238,6 +237,7 @@
     }
     return YES;
 }
+
 #pragma mark =============== 微信支付回调 ===============
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     return  [WXApi handleOpenURL:url delegate:self];
@@ -262,7 +262,6 @@
     
     if ([[resultDic objectForKey:@"resultStatus"] isEqualToString:@"9000"]) {
         
-        
 //        [MBProgressHUD showSuccess:@"支付成功" toView:view];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"alPaySuccess" object:nil];
         
@@ -272,29 +271,23 @@
         [MBProgressHUD showInfoMessage:@"取消支付"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"WXUserCancel" object:nil];
         
-        
     }else{
         [MBProgressHUD showError:@"支付失败"];
         // [[NSNotificationCenter defaultCenter] postNotificationName:@"WXPayError" object:nil];
-        
     }
 }
-
 
 //将苹果服务器返回的deviceToken,上传到极光推送服务器。
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     
     [JPUSHService registerDeviceToken:deviceToken];
-
 }
 //注册远程通知失败，比如没有联网的状态下。
 -(void)application:(UIApplication *)application
 didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
     NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
 }
-
-
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #pragma mark- JPUSHRegisterDelegate  ios 10
@@ -402,7 +395,6 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletion
     application.applicationIconBadgeNumber = 0;
     [JPUSHService setBadge:0];
     
-    
 }
 //自定义消息
 - (void)networkDidReceiveMessage:(NSNotification *)notification {
@@ -424,50 +416,38 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletion
            [[NSNotificationCenter defaultCenter] postNotificationName:@"getCompanyPrice" object:nil];
        
        }
-
-
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {
   
     //  即将进入前台  取消小红点
-    
     [application setApplicationIconBadgeNumber:0];
     [JPUSHService setBadge:0];
     [[UNUserNotificationCenter alloc] removeAllPendingNotificationRequests];
 
-    
-    
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
-
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    
 }
-
 
 @end
