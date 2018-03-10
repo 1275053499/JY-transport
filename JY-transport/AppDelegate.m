@@ -83,10 +83,6 @@
     [self RegisterEntityJPush:launchOptions];
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
-   
-    
-    
-    
     
     return YES;
 }
@@ -218,9 +214,7 @@
             NSLog(@"result = %@",resultDic);
             if ([[resultDic objectForKey:@"resultStatus"] isEqualToString:@"9000"]) {
                 
-                
-//                [MBProgressHUD showSuccess:@"支付成功" toView:view];
-                
+//               [MBProgressHUD showSuccess:@"支付成功" toView:view];
                 
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"alPaySuccess" object:nil];
                 
@@ -229,7 +223,6 @@
                 [MBProgressHUD showInfoMessage:@"取消支付"];
                 
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"alPayUserCancel" object:nil];
-                
                 
             }else{
                 

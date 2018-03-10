@@ -12,13 +12,9 @@
 
 #endif /* UrlInterfaces_h */
 
-
-
 static NSString * salt = @"lkajsd;flj)(*@$!#(*&OJKD(*&)291IOJPOIHCD*FUPOH$RO*UOds29874#¥(^-^)3IDSHFP(*EWUJRT:LK@#$U(*)_Q#R()IJD*(F_U";
 
-
 #define  QiNiu_DownLoadImageUrl @"http://ory7digfv.bkt.clouddn.com/"
-
 
 /**基本URL*/
 #define base_url @"http://120.76.55.187/"

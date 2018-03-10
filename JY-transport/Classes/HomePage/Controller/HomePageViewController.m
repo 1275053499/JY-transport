@@ -59,7 +59,7 @@
     _sendShip.frame = CGRectMake((ScreenWidth - btnWidth)/2,2* Space + btnWidth + 10, btnWidth, btnWidth);
     
     [_sendCarBtn setTitle:NSLocalizedString(@"我要找车", nil) forState:(UIControlStateNormal)];
-    [_sendShip setTitle:NSLocalizedString(@"我要发货", nil) forState:(UIControlStateNormal)];
+    [_sendShip   setTitle:NSLocalizedString(@"我要发货", nil) forState:(UIControlStateNormal)];
 }
 
 - (void)steBtnTitleFrame{

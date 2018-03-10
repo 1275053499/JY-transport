@@ -21,6 +21,7 @@
     CustomButton *previousBtn; //记录前一次选中的按钮
     NSArray *tabBarItemArray;
 }
+
 @property (nonatomic,strong)UINavigationController *messageNavigationController2;
 @end
 

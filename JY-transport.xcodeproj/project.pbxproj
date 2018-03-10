@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35747E86C50C1F1CBBC14265 /* libPods-JY-transport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B729E0DBCF5F5885023981 /* libPods-JY-transport.a */; };
+		44AD239F2053C6310066F72D /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD239E2053C6310066F72D /* NetWorkRequest.m */; };
 		4A42EEFB1EBF3DC1000947ED /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A42EEFA1EBF3DC0000947ED /* AMapLocationKit.framework */; };
 		4A42EF0D1EBF3EC9000947ED /* CityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A42EF011EBF3EC9000947ED /* CityData.plist */; };
 		4A42EF0E1EBF3EC9000947ED /* TLCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A42EF031EBF3EC9000947ED /* TLCity.m */; };
@@ -551,6 +552,8 @@
 /* Begin PBXFileReference section */
 		06B729E0DBCF5F5885023981 /* libPods-JY-transport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JY-transport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0743324A5D0601DC4046D6D7 /* Pods-JY-transport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JY-transport.release.xcconfig"; path = "Pods/Target Support Files/Pods-JY-transport/Pods-JY-transport.release.xcconfig"; sourceTree = "<group>"; };
+		44AD239D2053C6310066F72D /* NetWorkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkRequest.h; sourceTree = "<group>"; };
+		44AD239E2053C6310066F72D /* NetWorkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequest.m; sourceTree = "<group>"; };
 		4A42EEFA1EBF3DC0000947ED /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		4A42EF011EBF3EC9000947ED /* CityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityData.plist; sourceTree = "<group>"; };
 		4A42EF021EBF3EC9000947ED /* TLCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCity.h; sourceTree = "<group>"; };
@@ -2500,6 +2503,8 @@
 				8974B9241F3EF33E00DD12C4 /* NetAPIs.m */,
 				8974B9251F3EF33E00DD12C4 /* NetWorkHelper.h */,
 				8974B9261F3EF33E00DD12C4 /* NetWorkHelper.m */,
+				44AD239D2053C6310066F72D /* NetWorkRequest.h */,
+				44AD239E2053C6310066F72D /* NetWorkRequest.m */,
 				8974B9271F3EF33E00DD12C4 /* UrlInterfaces.h */,
 				896100CC1F42A2A200987C04 /* AFAppDotNetAPIClient.h */,
 				896100CD1F42A2A200987C04 /* AFAppDotNetAPIClient.m */,
@@ -3668,6 +3673,7 @@
 				65AF355D1FECE0D100DEA657 /* TimeOutFeeView.m in Sources */,
 				892E997B1EB1B0D9001C4473 /* MASViewAttribute.m in Sources */,
 				65B7A7BA1F51857100603951 /* JJPhoto.m in Sources */,
+				44AD239F2053C6310066F72D /* NetWorkRequest.m in Sources */,
 				653C64921FDE383A006B5C87 /* NSData+data.m in Sources */,
 				6535D70B200CC4BE00036F98 /* WithdrawTypeCell.m in Sources */,
 				65213BA61F5CE1D700CF2FEF /* JYConfirmTableViewCellSecond.m in Sources */,

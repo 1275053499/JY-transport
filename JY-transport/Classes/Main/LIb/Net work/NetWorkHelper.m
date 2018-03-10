@@ -45,7 +45,6 @@
     
     AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
 
-    
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -108,6 +107,7 @@
     }];
     
 }
+
 
 - (void)Post:(NSString *)url
    parameter:(id)parameter

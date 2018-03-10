@@ -20,7 +20,7 @@
 #define userD_password              @"password"
 #define userD_uuid                  @"uuid"
 #define userD_ticket                @"ticket"
-#define USER_NEED_LOGIN           @"isNeedLogin"
+#define USER_NEED_LOGIN             @"isNeedLogin"
 
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth  [[UIScreen mainScreen] bounds].size.width
@@ -62,7 +62,6 @@
 #define  BasicWidth  (1/iPhone6Weight*ScreenWidth)
 
 
-
 // IOS 7
 #define IOS7_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
 // 获取IOS系统版本号
@@ -95,8 +94,6 @@
 #define showAlert(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil]; [alert show]; }
 
 #define showTitleAlert(title,fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:title, ##__VA_ARGS__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil]; [alert show]; }
-
-
 
 //tabBar
 #define K_TAB_BAR_ITEM_ARRAY_FILE_NAME @"custom_tab_bar_array.plist"

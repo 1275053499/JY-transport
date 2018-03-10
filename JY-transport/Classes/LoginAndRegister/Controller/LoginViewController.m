@@ -434,46 +434,29 @@
 
 -(void)getIdentifyCodes{
     
-    
-    NSString *baseStr = base_url;
-    NSString *urlStr = [baseStr stringByAppendingString:@"app/user/getVerCode"];
-    
-    [[NetWorkHelper shareInstance]Post:urlStr parameter:@{@"phone":self.phoneNumber.text} success:^(id responseObj) {
-        
-        
+    [NetWorkRequest PostRequestCode:self.phoneNumber.text success:^(id responseObj) {
         NSLog(@"成功成功成功成功成功成功成功成功成功成功成功");
-        
-        [self openCountdown];
-        
+        //
+                [self openCountdown];
     } failure:^(NSError *error) {
-        
         NSLog(@"网络异常网络异常网络异常网络异常网络异常网络异常网络异常网络异常");
-        
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        [MBProgressHUD showError:@"网络异常"];
-        
+        //
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [MBProgressHUD showError:@"网络异常"];
     }];
-    
 }
 
 
 -(void)sendHttpReque
 {
     
-    NSString *baseStr = base_url;
-    NSString *urlStr = [baseStr stringByAppendingString:@"app/user/checkVerCode"];
-    
-    [[NetWorkHelper shareInstance]Post:urlStr parameter:@{@"phone":self.phoneNumber.text,@"verCode":self.CodeTextField.text,@"idea":@"0"} success:^(id responseObj) {
-        
-        
+    [NetWorkRequest PostRequestCode:self.phoneNumber.text verCode:self.CodeTextField.text idea:@"0" success:^(id responseObj) {
         NSString *DataStr = [responseObj objectForKey:@"message"];
         
         if ([[responseObj objectForKey:@"message"] isEqualToString:@"404"]) {
             
             [MBProgressHUD showError:@"此账号还没有加盟"];
-            
         }
-        
         
         if ([DataStr isEqualToString:@"0"]) {
             
@@ -488,9 +471,8 @@
             
             // 6.新特性\去首页
             [JYWuliuTool chooseRootController];
-         
-            [[NSNotificationCenter defaultCenter]postNotificationName:@"loginSuccess" object:nil];
             
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"loginSuccess" object:nil];
             
             // 7.隐藏提醒框
             //[MBProgressHUD hideHUD];
@@ -511,44 +493,33 @@
             [[[UIAlertView alloc]initWithTitle:@"提示" message:@"登录失败" delegate:nil cancelButtonTitle:@"我知道啦" otherButtonTitles:nil, nil]show];
         }
         
-        
-        
         NSLog(@"%@",responseObj);
-        
         
     } failure:^(NSError *error) {
         
-        [MBProgressHUD showError:@"网络异常"];
+         [MBProgressHUD showError:@"网络异常"];
     }];
-    
-    
-    
-    
+
 }
+
+#pragma mark 查询用户信息
 -(void)senderHttp
 {
     
-    NSString *baseStr = base_url;
-    NSString *urlStr = [baseStr stringByAppendingString:@"app/user/getUseInfo"];
-    
-    
-    [[NetWorkHelper shareInstance]Post:urlStr parameter:@{@"phone":self.phoneNumber.text} success:^(id responseObj) {
-       
-      
-         UserInfoModel *model = [[UserInfoModel alloc] init];
-       
-         model.phone = [responseObj objectForKey:@"phone"];
-       
+    [NetWorkRequest PostRequestUseInfo:self.phoneNumber.text success:^(id responseObj) {
+        UserInfoModel *model = [[UserInfoModel alloc] init];
+        
+        model.phone = [responseObj objectForKey:@"phone"];
+        
         if (model.phone.length <= 0 || [model.phone isEqual:[NSNull null]]) {
             model.phone = self.phoneNumber.text;
         }
-
+        
         model.nickname = [responseObj objectForKey:@"nickname"];
         if (model.nickname == nil || [model.nickname isEqual:[NSNull null]]) {
             model.nickname = self.phoneNumber.text;
         }
-
-      
+        
         if (model.icon == nil || [model.icon isEqual:[NSNull null]]) {
             model.icon = @"";
         }
@@ -558,17 +529,56 @@
         model.id = [responseObj objectForKey:@"id"];
         model.remark = [responseObj objectForKey:@"remark"];
         model.weixin = [responseObj objectForKey:@"weixin"];
-        model.qq  = [responseObj objectForKey:@"qq"];
+        model.qq  =     [responseObj objectForKey:@"qq"];
         model.sexuality = [responseObj objectForKey:@"sexuality"];
         
         [[JYAccountTool  shareInstance] saveUserInfoModel:model];
-        
-
     } failure:^(NSError *error) {
         
-        //         [MBProgressHUD showError:@"网络异常" toView:self.view];
     }];
+        
+   
     
+//    NSString *baseStr = base_url;
+//    NSString *urlStr = [baseStr stringByAppendingString:@"app/user/getUseInfo"];
+//
+//
+//    [[NetWorkHelper shareInstance]Post:urlStr parameter:@{@"phone":self.phoneNumber.text} success:^(id responseObj) {
+//
+//
+//         UserInfoModel *model = [[UserInfoModel alloc] init];
+//
+//         model.phone = [responseObj objectForKey:@"phone"];
+//
+//        if (model.phone.length <= 0 || [model.phone isEqual:[NSNull null]]) {
+//            model.phone = self.phoneNumber.text;
+//        }
+//
+//        model.nickname = [responseObj objectForKey:@"nickname"];
+//        if (model.nickname == nil || [model.nickname isEqual:[NSNull null]]) {
+//            model.nickname = self.phoneNumber.text;
+//        }
+//
+//        if (model.icon == nil || [model.icon isEqual:[NSNull null]]) {
+//            model.icon = @"";
+//        }
+//
+//        model.icon = [responseObj objectForKey:@"icon"];
+//        _driverIconName = model.icon;
+//        model.id = [responseObj objectForKey:@"id"];
+//        model.remark = [responseObj objectForKey:@"remark"];
+//        model.weixin = [responseObj objectForKey:@"weixin"];
+//        model.qq  =     [responseObj objectForKey:@"qq"];
+//        model.sexuality = [responseObj objectForKey:@"sexuality"];
+//
+//        [[JYAccountTool  shareInstance] saveUserInfoModel:model];
+//
+//
+//    } failure:^(NSError *error) {
+//
+//        //         [MBProgressHUD showError:@"网络异常" toView:self.view];
+//    }];
+//
     
 }
 

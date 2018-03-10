@@ -66,9 +66,6 @@
 @property(nonatomic,strong)platformBidView *platformBidView;//弹框
 @property(nonatomic,strong)UIView *platformView;//底层遮盖物
 
-
-
-
 //是不是包半日按钮被选择了
 @property(nonatomic,assign)BOOL isHalfOfDay;
 //是不是包一日按钮被选择了
@@ -165,11 +162,10 @@
     NSArray *LatitudeArray = @[@"",@""];
     [self.LatitudeArr addObjectsFromArray:LatitudeArray];
     
-    
     //纬度
     NSArray *LongitudeArray = @[@"",@""];
-    
     [self.LongitudeArr addObjectsFromArray:LongitudeArray];
+    
     
     //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -192,12 +188,11 @@
     _placeholderPhone = userPhone;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNotificiation:) name:@"carTypeChange" object:nil];
     
-    
-  
-    _locService = [[BMKLocationService alloc]init];
-    _geoCodeSearch = [[BMKGeoCodeSearch alloc] init];
-    _geoCodeSearch.delegate = self;
-    _locService.delegate = self;
+
+    _locService =       [[BMKLocationService alloc]init];
+    _geoCodeSearch =    [[BMKGeoCodeSearch alloc] init];
+    _geoCodeSearch.delegate     = self;
+    _locService.delegate        = self;
 
     
     _carName = @[@"微面",@"大型面包车",@"依维柯",@"微型货车",@"小型货车",@"中型货车",@"平板车"];
@@ -215,8 +210,6 @@
     
     [sureBtn setTitle:@"即时用车" forState:UIControlStateNormal];
     [sureBtn setBackgroundColor:BGBlue];
-    
-    
     sureBtn.tag = 422;
     sureBtn.titleLabel.font = [UIFont fontWithName:Default_APP_Font_Regu size:22];
     [sureBtn addTarget:self action:@selector(sureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -228,21 +221,19 @@
     [yueBtn setTitle:@"预约" forState:UIControlStateNormal];
     yueBtn.tag = 423;
     [yueBtn setBackgroundColor:RGBA(105,181 ,240, 1)];
-    
     yueBtn.titleLabel.font = [UIFont fontWithName:Default_APP_Font_Regu size:22];
     
     [yueBtn addTarget:self action:@selector(sureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     _yueBtn = yueBtn;
     [self.view addSubview:yueBtn];
-    
+
 }
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
-
     [[IQKeyboardManager sharedManager] setEnable:YES];
     [[IQKeyboardManager sharedManager] setEnableAutoToolbar:YES];
-    
     
 }
 //// 收到通知改变车型的名字
@@ -257,10 +248,10 @@
         
         [self.allSeletedService removeAllObjects];
         [self judgeWhitchServiceBtnNeedTip];
-        
         [self senderHttpReque];
     });
 }
+
 //退出
 #pragma mark - action handle
 - (void)returnAction
@@ -270,6 +261,7 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 //确定下单
 - (BOOL)confirmOrder{
     
