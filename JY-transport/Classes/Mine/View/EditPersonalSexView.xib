@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EditPersonalSexView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-6l-LBK">
+                    <rect key="frame" x="52" y="241.5" width="271" height="184"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bna-KH-gnX">
+                            <rect key="frame" x="0.0" y="0.0" width="271" height="187"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="187" id="SO1-Mh-LSY"/>
+                                <constraint firstAttribute="width" constant="271" id="vbC-sR-Eax"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acJ-T8-9fG">
+                            <rect key="frame" x="8" y="9" width="52" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52" id="Gkg-Yt-Q1h"/>
+                                <constraint firstAttribute="height" constant="33" id="Nf0-5j-V1b"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Suv-SW-UCT">
+                            <rect key="frame" x="0.0" y="51" width="271" height="125"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="125" id="OPi-wO-9Mp"/>
+                                <constraint firstAttribute="width" constant="271" id="jm0-N9-wNi"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="271" id="9S9-ns-Rkn"/>
+                        <constraint firstAttribute="bottom" secondItem="Suv-SW-UCT" secondAttribute="bottom" constant="8" id="C8w-xI-A8h"/>
+                        <constraint firstItem="acJ-T8-9fG" firstAttribute="top" secondItem="dTC-6l-LBK" secondAttribute="top" constant="9" id="UL8-bc-hO8"/>
+                        <constraint firstItem="bna-KH-gnX" firstAttribute="leading" secondItem="dTC-6l-LBK" secondAttribute="leading" id="WgF-g2-Sc0"/>
+                        <constraint firstAttribute="height" constant="184" id="ZZD-uw-U4w"/>
+                        <constraint firstItem="acJ-T8-9fG" firstAttribute="leading" secondItem="dTC-6l-LBK" secondAttribute="leading" constant="8" id="cI7-hu-Trt"/>
+                        <constraint firstItem="Suv-SW-UCT" firstAttribute="leading" secondItem="bna-KH-gnX" secondAttribute="leading" id="eAL-hu-t9j"/>
+                        <constraint firstItem="bna-KH-gnX" firstAttribute="top" secondItem="dTC-6l-LBK" secondAttribute="top" id="zgD-yB-upN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="dTC-6l-LBK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bPP-Xw-AIr"/>
+                <constraint firstItem="dTC-6l-LBK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ceF-G3-5b4"/>
+            </constraints>
+            <connections>
+                <outlet property="setTableView" destination="Suv-SW-UCT" id="6Q9-NC-J1D"/>
+                <outlet property="sexHeadLabel" destination="acJ-T8-9fG" id="qPm-Pr-Dpc"/>
+                <outlet property="underView" destination="dTC-6l-LBK" id="NQA-NZ-89z"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

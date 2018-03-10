@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>K_TAB_BAR_ITEM_DEFAULT_IMAGE</key>
+		<string>tab_icon_home_normal</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_HEIGHTLIGHT_IMAGE</key>
+		<string>tab_icon_home_selected</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_TEXT</key>
+		<string>首页</string>
+	</dict>
+	<dict>
+		<key>K_TAB_BAR_ITEM_DEFAULT_IMAGE</key>
+		<string>tab_icon_order_normal</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_HEIGHTLIGHT_IMAGE</key>
+		<string>tab_icon_order_selected</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_TEXT</key>
+		<string>订单</string>
+	</dict>
+	<dict>
+		<key>K_TAB_BAR_ITEM_DEFAULT_IMAGE</key>
+		<string>tab_icon_activity_normal</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_HEIGHTLIGHT_IMAGE</key>
+		<string>tab_icon_activity_selected</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_TEXT</key>
+		<string>活动</string>
+	</dict>
+	<dict>
+		<key>K_TAB_BAR_ITEM_DEFAULT_IMAGE</key>
+		<string>tab_icon_mine_normal</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_HEIGHTLIGHT_IMAGE</key>
+		<string>tab_icon_mine_selected</string>
+		<key>K_TAB_BAR_ITEM_DEFAULT_TEXT</key>
+		<string>我的</string>
+	</dict>
+</array>
+</plist>

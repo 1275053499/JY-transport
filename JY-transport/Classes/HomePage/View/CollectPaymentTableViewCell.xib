@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CollectPaymentTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="代收金额(元)：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smI-LZ-m69">
+                        <rect key="frame" x="15" y="11.5" width="100" height="21"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入代收金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-TP-0ak">
+                        <rect key="frame" x="130" y="0.0" width="175" height="43.5"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zgl-TP-0ak" firstAttribute="leading" secondItem="smI-LZ-m69" secondAttribute="trailing" constant="15" id="GMp-QB-ibd"/>
+                    <constraint firstAttribute="bottom" secondItem="zgl-TP-0ak" secondAttribute="bottom" id="U3w-FY-M2Y"/>
+                    <constraint firstItem="zgl-TP-0ak" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UaU-1K-MUB"/>
+                    <constraint firstItem="smI-LZ-m69" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ad6-0M-3de"/>
+                    <constraint firstItem="smI-LZ-m69" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="eZD-t1-gNz"/>
+                    <constraint firstItem="zgl-TP-0ak" firstAttribute="centerY" secondItem="smI-LZ-m69" secondAttribute="centerY" id="jo9-08-r9O"/>
+                    <constraint firstAttribute="trailing" secondItem="zgl-TP-0ak" secondAttribute="trailing" constant="15" id="v10-kc-4PX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textMoney" destination="zgl-TP-0ak" id="9L0-AE-Kqs"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

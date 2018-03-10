@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="JYFileTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ov-je-IPF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-TQ-NQS">
+                                <rect key="frame" x="35" y="10" width="63" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="Aa7-tz-q12"/>
+                                    <constraint firstAttribute="height" constant="60" id="YQf-mu-NuT"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-f2-48j">
+                                <rect key="frame" x="222" y="7.5" width="63" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="3nt-qT-zKQ"/>
+                                    <constraint firstAttribute="height" constant="65" id="82h-jG-YqS"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlQ-3P-pnf">
+                                <rect key="frame" x="123.5" y="7.5" width="70" height="65"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="0OP-QQ-ipJ"/>
+                                    <constraint firstAttribute="height" constant="65" id="l5e-ee-CHm"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ask-f2-48j" secondAttribute="trailing" constant="35" id="3s3-QW-UGy"/>
+                            <constraint firstItem="dlQ-3P-pnf" firstAttribute="centerX" secondItem="8ov-je-IPF" secondAttribute="centerX" multiplier="0.99" id="KXP-6c-ACW"/>
+                            <constraint firstItem="slZ-TQ-NQS" firstAttribute="leading" secondItem="8ov-je-IPF" secondAttribute="leading" constant="35" id="MyV-OA-XcM"/>
+                            <constraint firstItem="dlQ-3P-pnf" firstAttribute="centerY" secondItem="8ov-je-IPF" secondAttribute="centerY" id="POR-xa-XQ3"/>
+                            <constraint firstItem="Ask-f2-48j" firstAttribute="centerY" secondItem="8ov-je-IPF" secondAttribute="centerY" id="QU4-V9-OVS"/>
+                            <constraint firstItem="slZ-TQ-NQS" firstAttribute="centerY" secondItem="8ov-je-IPF" secondAttribute="centerY" id="se8-NU-gzW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="8ov-je-IPF" secondAttribute="bottom" id="07s-ZD-lzA"/>
+                    <constraint firstAttribute="trailing" secondItem="8ov-je-IPF" secondAttribute="trailing" id="3AV-Ud-cXI"/>
+                    <constraint firstItem="8ov-je-IPF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a87-Eu-YkW"/>
+                    <constraint firstItem="8ov-je-IPF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pDL-ih-sTc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bigFile" destination="Ask-f2-48j" id="0yo-bZ-AUb"/>
+                <outlet property="file" destination="slZ-TQ-NQS" id="M4b-G0-YbH"/>
+                <outlet property="smallFile" destination="dlQ-3P-pnf" id="YC0-C7-1sH"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

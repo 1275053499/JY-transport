@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="timeAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="87"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0l-ED-UCD">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="87"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qipaotime" translatesAutoresizingMaskIntoConstraints="NO" id="kvU-Yj-uno">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="87"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blz-Kl-zr5">
+                            <rect key="frame" x="30.5" y="9" width="140" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="4MM-TR-AQf"/>
+                                <constraint firstAttribute="height" constant="21" id="eWH-xn-AIG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-B6-mLi">
+                            <rect key="frame" x="30.5" y="25" width="140" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="2Ui-fp-2oK"/>
+                                <constraint firstAttribute="width" constant="140" id="dSr-6j-41m"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlR-QI-xKB">
+                            <rect key="frame" x="30.5" y="36" width="140" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="3iS-g8-vUP"/>
+                                <constraint firstAttribute="width" constant="140" id="BG0-0S-adw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="blz-Kl-zr5" firstAttribute="centerX" secondItem="V0l-ED-UCD" secondAttribute="centerX" id="1no-LT-tcP"/>
+                        <constraint firstItem="kvU-Yj-uno" firstAttribute="leading" secondItem="V0l-ED-UCD" secondAttribute="leading" id="9qr-0T-3zY"/>
+                        <constraint firstItem="blz-Kl-zr5" firstAttribute="top" secondItem="V0l-ED-UCD" secondAttribute="top" constant="9" id="DY3-yW-B99"/>
+                        <constraint firstAttribute="bottom" secondItem="kvU-Yj-uno" secondAttribute="bottom" id="FHw-O9-2fg"/>
+                        <constraint firstItem="kvU-Yj-uno" firstAttribute="top" secondItem="V0l-ED-UCD" secondAttribute="top" id="S4c-Ko-ERc"/>
+                        <constraint firstItem="GlR-QI-xKB" firstAttribute="bottom" secondItem="blz-Kl-zr5" secondAttribute="bottom" constant="27" id="Ted-uV-tKh"/>
+                        <constraint firstItem="mvs-B6-mLi" firstAttribute="centerX" secondItem="V0l-ED-UCD" secondAttribute="centerX" id="bEi-fn-Par"/>
+                        <constraint firstItem="mvs-B6-mLi" firstAttribute="top" secondItem="blz-Kl-zr5" secondAttribute="bottom" constant="-5" id="iwS-yy-2tc"/>
+                        <constraint firstItem="kvU-Yj-uno" firstAttribute="centerX" secondItem="blz-Kl-zr5" secondAttribute="centerX" id="vW7-gx-eKx"/>
+                        <constraint firstItem="GlR-QI-xKB" firstAttribute="centerX" secondItem="V0l-ED-UCD" secondAttribute="centerX" id="zSg-j3-03v"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="V0l-ED-UCD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ONj-Gw-KWP"/>
+                <constraint firstAttribute="trailing" secondItem="V0l-ED-UCD" secondAttribute="trailing" id="S2V-oU-adw"/>
+                <constraint firstItem="V0l-ED-UCD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="r7D-O6-9Mh"/>
+                <constraint firstAttribute="bottom" secondItem="V0l-ED-UCD" secondAttribute="bottom" id="uj0-1I-rld"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="calloutView" destination="V0l-ED-UCD" id="ShP-gx-EwA"/>
+                <outlet property="distanceNum" destination="mvs-B6-mLi" id="vLj-0a-3sL"/>
+                <outlet property="driverNum" destination="GlR-QI-xKB" id="wpH-gT-uHz"/>
+                <outlet property="timeNum" destination="blz-Kl-zr5" id="OWX-13-zns"/>
+            </connections>
+            <point key="canvasLocation" x="54" y="-27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="qipaotime" width="60" height="28"/>
+    </resources>
+</document>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="-83" id="KGk-i7-Jjw" customClass="serviceDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0U-qX-cDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3L-cS-iup">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="49"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                <state key="normal" title="  高速" image="icon_gaosu">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.066666666666666666" green="0.54117647058823526" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRx-zV-QkN">
+                                <rect key="frame" x="152" y="0.0" width="160" height="49.5"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                <state key="normal" title="  手推车" image="icon_xuyaoshoutuiche_lanse">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.066666666666666666" green="0.54117647058823526" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1K-so-nWI">
+                                <rect key="frame" x="160" y="0.0" width="1" height="49.5"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="Ud4-1d-hVV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="F3L-cS-iup" secondAttribute="bottom" id="Deh-HI-qlk"/>
+                            <constraint firstItem="F3L-cS-iup" firstAttribute="width" secondItem="J0U-qX-cDZ" secondAttribute="width" multiplier="0.5" id="J44-Pn-g8d"/>
+                            <constraint firstItem="TRx-zV-QkN" firstAttribute="top" secondItem="J0U-qX-cDZ" secondAttribute="top" id="NsE-bw-DbS"/>
+                            <constraint firstItem="F3L-cS-iup" firstAttribute="leading" secondItem="J0U-qX-cDZ" secondAttribute="leading" id="bE5-7Q-ga6"/>
+                            <constraint firstItem="TRx-zV-QkN" firstAttribute="width" secondItem="J0U-qX-cDZ" secondAttribute="width" multiplier="0.5" id="cuk-CD-IPz"/>
+                            <constraint firstItem="W1K-so-nWI" firstAttribute="top" secondItem="J0U-qX-cDZ" secondAttribute="top" id="ebz-Iz-eiS"/>
+                            <constraint firstItem="TRx-zV-QkN" firstAttribute="trailing" secondItem="J0U-qX-cDZ" secondAttribute="trailingMargin" id="gYX-Ho-vfx"/>
+                            <constraint firstAttribute="bottom" secondItem="W1K-so-nWI" secondAttribute="bottom" id="hul-Bc-weG"/>
+                            <constraint firstItem="TRx-zV-QkN" firstAttribute="centerY" secondItem="F3L-cS-iup" secondAttribute="centerY" id="lfu-Q0-NDe"/>
+                            <constraint firstAttribute="bottom" secondItem="TRx-zV-QkN" secondAttribute="bottom" id="su8-fW-UdN"/>
+                            <constraint firstItem="F3L-cS-iup" firstAttribute="top" secondItem="J0U-qX-cDZ" secondAttribute="top" id="vDb-vT-k0o"/>
+                            <constraint firstItem="W1K-so-nWI" firstAttribute="centerX" secondItem="J0U-qX-cDZ" secondAttribute="centerX" id="zrg-l8-En7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="J0U-qX-cDZ" secondAttribute="trailing" id="1UA-Hi-idB"/>
+                    <constraint firstItem="J0U-qX-cDZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Km0-l1-2QK"/>
+                    <constraint firstItem="J0U-qX-cDZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sih-mf-7zY"/>
+                    <constraint firstAttribute="bottom" secondItem="J0U-qX-cDZ" secondAttribute="bottom" id="ugL-Xa-JM5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomView" destination="J0U-qX-cDZ" id="FEN-sC-vy0"/>
+                <outlet property="leftBtn" destination="F3L-cS-iup" id="9sb-Zq-USj"/>
+                <outlet property="linViewBottomConstraint" destination="hul-Bc-weG" id="bhr-4l-4i9"/>
+                <outlet property="lineView" destination="W1K-so-nWI" id="oXu-aL-Gcv"/>
+                <outlet property="lineViewTopConstraint" destination="ebz-Iz-eiS" id="rIO-g9-GIE"/>
+                <outlet property="rightBtn" destination="TRx-zV-QkN" id="pJr-eJ-2Gc"/>
+            </connections>
+            <point key="canvasLocation" x="39" y="-75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_gaosu" width="33" height="33"/>
+        <image name="icon_xuyaoshoutuiche_lanse" width="33" height="33"/>
+    </resources>
+</document>
